@@ -1,15 +1,17 @@
 import './styles.scss';
+import Cat from './cat.jpeg';
 
 console.log("Webpack entry point!")
 
-// function component() {
-//     const element = document.createElement('div');
+function component() {
+    const element = document.createElement('div');
 
-//     // Lodash, now imported by this script
-//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-//     element.classList.add('hello');
+    const myCat = new Image();
+    myCat.src = Cat;
 
-//     return element;
-//   }
+    element.appendChild(myCat);
 
-//   document.body.appendChild(component());
+    return element;
+  }
+
+  document.body.appendChild(component());
